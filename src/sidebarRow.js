@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Avatar } from '@material-ui/core';
-import Icon from '@material-ui/core/Icon';
+import { Avatar, Icon } from '@material-ui/core';
 import './sidebarRow.css';
-function SidebarRow({ src, title, icon }) {
+import ChatIcon from '@material-ui/icons/Chat';
+import { Children } from 'react';
+function SidebarRow({ src, title, icon, children }) {
   return (
     <div className="sidebarRow">
-      {src && <Avatar src={src} />}
-      {icon && <Icon src={icon} />}
+      <div>{children}</div>
       <h4>{title}</h4>
     </div>
   );
